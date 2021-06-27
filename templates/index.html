@@ -1,0 +1,27 @@
+<h1>HELLO WORLD!!!</h1>
+
+<p> This is my first webpage!!!</p>
+
+<p> This is getting rendered from the template</p>
+
+<p> The name is {{first_name|capitalize}}</p>
+
+<p> {{stuff|safe}} </p>
+
+<p> {{striptags|striptags|title}}</p>
+
+<h3>Favourite Players</h3>
+{% for player in favourite_players%}
+    {% if player == 'Rafael Nadal'%}
+        {{player+' is <strong>G.O.A.T</strong>'|safe}}<br/>
+    {% else %}
+        {{player}}<br/>
+    {% endif %}
+{% endfor %}
+<br></br>
+{{favourite_players.0}}
+
+<h3> Changing number in the list </h3>
+{{favourite_players.3 + 10}}
+
+{{favourite_players.0|reverse}}
