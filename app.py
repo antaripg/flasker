@@ -18,10 +18,6 @@ def index():
     test=test_sentence,
     favorite_pizza=favorite_pizza)
 
-# User Route
-@app.route("/user/")
-def user():
-    return "<h1>This is a placeholder user page for now</h1>"
 
 # User Name Route
 @app.route("/user/<name>")
